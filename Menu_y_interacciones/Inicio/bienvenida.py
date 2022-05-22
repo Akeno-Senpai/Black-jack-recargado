@@ -21,14 +21,13 @@ print("Importante, leer antes de continuar: \n")
 print("\t* El monto del pozo no puede ser mayor a 100000$")
 print("\t* El monto del pozo no puede ser menor a 1$")
 
-inicio = int(input("\nSi aun asi usted desea continuar, presione uno:\t "))
 
 def datos_jugador():
+    inicio = int(input("\nSi aun asi usted desea continuar, presione uno:\t "))
     nombre_jugador = ""
     apellido_jugador = ""
     monto_inical_pozo = 0
     bandera = True
-    inicio = 0
     while bandera:
         if inicio == 1:
             nombre_jugador = input("Ingrese su nombre para poder continuar: ")

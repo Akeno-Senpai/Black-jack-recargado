@@ -1,5 +1,5 @@
 def pozo_menor_100000(a):
-    if a > 100000:
+    if 1 < a < 100000:
         cancelar = True
 
     else:
