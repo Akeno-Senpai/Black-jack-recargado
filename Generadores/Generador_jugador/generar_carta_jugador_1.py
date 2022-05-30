@@ -13,12 +13,12 @@ def generar_carta_jugador():
     palos_carta = palos[ind_palos]
 
 
-    primera_carta = val_carta , nom_carta, palos_carta
-    val_primera_carta = primera_carta[0]
-    nom_primera_carta = primera_carta[1]
+    #primera_carta = val_carta , nom_carta, palos_carta
+    #val_primera_carta = primera_carta[0]
+    #nom_primera_carta = primera_carta[1]
+    return nom_carta, palos_carta, val_carta
 
 
-
-    print("La Carta es: \t", nom_carta, palos_carta)
+print(generar_carta_jugador())
 
 
