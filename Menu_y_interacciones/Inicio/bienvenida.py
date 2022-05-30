@@ -52,5 +52,3 @@ def datos_jugador():
 
     return monto_inical_pozo, nombre_jugador, apellido_jugador
 
-
-Alex es un puto
