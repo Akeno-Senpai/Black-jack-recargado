@@ -32,14 +32,9 @@ def datos_jugador():
         if inicio == 1:
             nombre_jugador = input("Ingrese su nombre para poder continuar: ")
             apellido_jugador = input("Ingrese su apellido para poder continuar: ")
-            monto_inical_pozo = int(
-                input("Ingrese el monto desdeado para inciar el juego:\t "))
-            monto_inical_pozo_validacion = pozo_menor_100000(monto_inical_pozo)
-            while monto_inical_pozo_validacion:
-                if monto_inical_pozo_validacion == True:
-                    monto_inical_pozo = int(input("Ingrese un monto adecuado para inciar el juego:\t "))
-                else:
-                    monto_inical_pozo_validacion = False
+            monto_inical_pozo_validacion, monto_inical_pozo = pozo_menor_100000()
+            while monto_inical_pozo_validacion == False:
+                     monto_inical_pozo_validacion, monto_inical_pozo = pozo_menor_100000()
             print(" ")
             print("*" * 40)
             print("\nSea cordialmente bienvendio a Black Jack: Recargado señor: ", nombre_jugador, apellido_jugador)
@@ -54,4 +49,5 @@ def datos_jugador():
                 bandera = False
             else:
                 bandera = True
+
     return monto_inical_pozo, nombre_jugador, apellido_jugador
