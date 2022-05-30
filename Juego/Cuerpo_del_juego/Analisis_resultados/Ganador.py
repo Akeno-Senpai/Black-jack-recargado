@@ -1,6 +1,6 @@
 Puntaje_Total_jugador = 10
 Puntaje_Total_Croupier = 10
-def Resultado_1(Puntaje_Total_jugador,Puntaje_Total_Croupier):
+def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier):
     if (Puntaje_Total_jugador <= 21) and (Puntaje_Total_Croupier < Puntaje_Total_jugador) or (Puntaje_Total_Croupier > 21):
         print('\nHas ganado esta ronda', '\nTu puntaje es: ', Puntaje_Total_jugador,'\ny el del Croupier es: ',Puntaje_Total_Croupier)
     elif (Puntaje_Total_Croupier > Puntaje_Total_jugador) and (Puntaje_Total_Croupier <= 21) or (Puntaje_Total_jugador > 21):
@@ -10,4 +10,4 @@ def Resultado_1(Puntaje_Total_jugador,Puntaje_Total_Croupier):
 
         return Puntaje_Total_jugador, Puntaje_Total_Croupier
 
-Resultado_1(Puntaje_Total_jugador,Puntaje_Total_Croupier)
+Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier)
