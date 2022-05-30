@@ -10,7 +10,5 @@ def generador_1 ():
     val_carta = valores[ind_carta]
     palos_carta = palos[ind_palos]
 
-    return nom_carta, palos_carta
+    return nom_carta, palos_carta, val_carta
 
-
-print(generador_1())
