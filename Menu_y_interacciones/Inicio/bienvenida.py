@@ -1,28 +1,34 @@
 #Solicitar datos del jugador tales como: Nombre, Apellido y monto del pozo#
 
-
-#Variables#
-from Menu_y_interacciones.Inicio.Analisis_pozo import pozo_menor_100000
-nombre_jugador = ""
-apellido_jugador = ""
-monto_inical_pozo = 0
-bandera = True
-inicio = 0
-#Variables#
-
-
-print("")
-print("*" * 40)
-print("\n Black Jack: Recargado \n")
-print("*" * 40)
-print("")
-print("")
-print("Importante, leer antes de continuar: \n")
-print("\t* El monto del pozo no puede ser mayor a 100000$")
-print("\t* El monto del pozo no puede ser menor a 1$")
-
-
 def datos_jugador():
+
+
+
+    #Variables#
+
+
+    from Menu_y_interacciones.Inicio.Analisis_pozo import pozo_menor_100000
+    nombre_jugador = ""
+    apellido_jugador = ""
+    monto_inical_pozo = 0
+    bandera = True
+    inicio = 0
+
+
+    #Variables#
+
+
+    print("")
+    print("*" * 40)
+    print("\n Black Jack: Recargado \n")
+    print("*" * 40)
+    print("")
+    print("")
+    print("Importante, leer antes de continuar: \n")
+    print("\t* El monto del pozo no puede ser mayor a 100000$")
+    print("\t* El monto del pozo no puede ser menor a 1$")
+
+
     inicio = int(input("\nSi aun asi usted desea continuar, presione uno:\t "))
     nombre_jugador = ""
     apellido_jugador = ""
@@ -52,5 +58,4 @@ def datos_jugador():
 
     return monto_inical_pozo, nombre_jugador, apellido_jugador
 
-
-Alex es un puto
+datos_jugador()
