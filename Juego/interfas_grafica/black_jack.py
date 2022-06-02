@@ -1,3 +1,3 @@
-from Menu_y_interacciones.Inicio.bienvenida import datos_jugador
+from Juego.Cuerpo_del_juego.main import black_jack
 
 black_jack()

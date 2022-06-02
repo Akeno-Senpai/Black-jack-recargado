@@ -2,6 +2,8 @@
 
 def jugar_una_mano(monto_pozo_actual):
 
+    from Juego.Cuerpo_del_juego.Analisis_resultados.Resultados_ronda import Resultado
+
     from Generadores.generar_cartas import generador_1
 
     import time
@@ -118,6 +120,8 @@ def jugar_una_mano(monto_pozo_actual):
 
                     print("\nPuntaje actual del croupier: ", puntaje_actual_croupier)
 
+                    Resultado(puntaje_actual_jugador, puntaje_actual_croupier)
+
                     print("º" * 100)
 
                     print("º" * 100)
@@ -144,7 +148,12 @@ def jugar_una_mano(monto_pozo_actual):
 
                     print("\nPuntaje actual del croupier: ", puntaje_actual_croupier)
 
-                time.sleep(1.5)
+
+                time.sleep(1)
+
+                print("Verificando ganador de ronda")
+
+                time.sleep(1)
 
                 print("")
 
@@ -160,7 +169,7 @@ def jugar_una_mano(monto_pozo_actual):
 
                 print("º" * 100)
 
-                return
+                Resultado(puntaje_actual_jugador, puntaje_actual_croupier)
 
             else:
 
@@ -172,11 +181,17 @@ def jugar_una_mano(monto_pozo_actual):
 
             puntaje_final_jugador = puntaje_actual_jugador
 
+            puntaje_final_croupier = puntaje_actual_croupier
+
             print("\n", "El puntaje final del jugador es: ", puntaje_final_jugador)
 
             print("\n", "La mano ah finalizado, a continuacion sera redirijido al menu principal")
 
-            time.sleep(1.5)
+            time.sleep(1)
+
+            print("Verificando ganador de ronda")
+
+            time.sleep(1)
 
             print("")
 
@@ -191,3 +206,41 @@ def jugar_una_mano(monto_pozo_actual):
             print("º" * 100)
 
             print("º" * 100)
+
+            Resultado(puntaje_final_jugador, puntaje_final_croupier)
+
+        if puntaje_actual_jugador == 21:
+
+            puntaje_final_jugador = puntaje_actual_jugador
+
+            puntaje_final_croupier = puntaje_actual_croupier
+
+            print("\n", "El puntaje final del jugador es: ", puntaje_final_jugador)
+
+            print("\n", "El puntaje final del croupier es: ", puntaje_final_croupier)
+
+            print("\n", "La mano ah finalizado, a continuacion sera redirijido al menu principal")
+
+
+            time.sleep(1)
+
+            print("Verificando ganador de ronda")
+
+            time.sleep(1)
+
+            print("")
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            Resultado(puntaje_final_jugador, puntaje_final_croupier)
+
