@@ -18,6 +18,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     print("\n", "ingrese el valor a apostar:")
 
+    print("")
+
     monto_apostado = int(input("\n\t"))
 
     print("º" * 100)
@@ -25,11 +27,9 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
     print("º" * 100)
 
     if monto_pozo_actual == 0:
-        Monto_pozo_actual = monto_pozo_inicial
-    else:
-        Monto_pozo_actual = monto_pozo_actual
+        monto_pozo_actual = monto_pozo_inicial
 
-    if monto_apostado <= Monto_pozo_actual and monto_apostado % 5 == 0 and Monto_pozo_actual >= 5:
+    if monto_apostado <= monto_pozo_actual and monto_apostado % 5 == 0 and monto_pozo_actual >= 5:
 
         nombre_carta_jugador_1, palo_carta_jugador_1, carta_jugador_1  = generador_1()
 
@@ -50,8 +50,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
         puntaje_actual_jugador = carta_jugador_1 + carta_jugador_2
 
         puntaje_actual_croupier = carta_croupier_1
-
-        time.sleep(2)
 
         print("\n", carta_jugador_1_tupla, "Primera carta jugador")
 
@@ -144,8 +142,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 
                     carta_croupier_tupla = (nombre_carta_croupier, palo_carta_croupier)
-
-                    time.sleep(0.5)
 
                     print("\nLa nueva carta del croupier es: ", carta_croupier_tupla)
 
@@ -249,6 +245,5 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
             print("º" * 100)
 
             Resultado(puntaje_final_jugador, puntaje_final_croupier)
-
-            return monto_pozo_actual, monto_pozo_inicial
+            return
 

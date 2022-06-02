@@ -1,6 +1,6 @@
 
 
-def menu_opciones(valor_pozo_inicial):
+def menu_opciones(valor_pozo_inicial, racha_crupier):
 
     from Menu_y_interacciones.Menu.Opciones_menu.Apostar import apostar
 
@@ -35,8 +35,8 @@ def menu_opciones(valor_pozo_inicial):
             jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
 
         elif opcion == 3:
-
-            salir()
+            Victorias_jugador, Partidas_jugadas =0
+            salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
 
         else:
 
@@ -47,3 +47,4 @@ def menu_opciones(valor_pozo_inicial):
             print("Precione enter para volver al menu: ")
 
             input()
+    return racha_crupier
