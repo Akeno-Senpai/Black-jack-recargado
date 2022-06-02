@@ -11,9 +11,3 @@ def generador_1 ():
     palos_carta = palos[ind_palos]
 
     return nom_carta, palos_carta, val_carta
-generador_1()
-nom_carta, palo_carta, val_carta = generador_1()
-
-print(nom_carta)
-print(palo_carta)
-print(val_carta)
