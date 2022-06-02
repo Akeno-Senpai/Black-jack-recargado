@@ -26,11 +26,11 @@ def menu_opciones(valor_pozo_inicial):
 
         if opcion == 1:
 
-            monto_pozo_actual = apostar(valor_pozo_inicial)
+            monto_pozo_actual, monto_inicial_pozo = apostar(valor_pozo_inicial)
 
         elif opcion == 2:
 
-            jugar_una_mano(monto_pozo_actual)
+            jugar_una_mano(monto_pozo_actual, monto_inicial_pozo)
 
         elif opcion == 3:
 

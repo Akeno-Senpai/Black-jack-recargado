@@ -2,6 +2,7 @@
 
 def apostar(monto_inicial_jugador):
 
+    print("Tienes el siguiente monto en tu pozo:",monto_inicial_jugador)
     nueva_apuesta = int(input('Ingrese la cantidad que quiere agregar a su pozo. Mayor a 1 y menor a 100000: '))
     pozo_jugador = monto_inicial_jugador
 
@@ -20,4 +21,4 @@ def apostar(monto_inicial_jugador):
             bandera = True
 
 
-    return pozo_jugador
+    return pozo_jugador, monto_inicial_jugador

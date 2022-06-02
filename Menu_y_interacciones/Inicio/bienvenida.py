@@ -26,9 +26,9 @@ def datos_jugador():
     print("\t* El monto del pozo no puede ser mayor a 100000$")
     print("\t* El monto del pozo no puede ser menor a 1$")
 
-    print("1- Continuar")
-    print("2- Salir")
-    inicio = int(input("Ingrese la opcion que desee"))
+    print("\n", "1- Continuar")
+    print("\n", "2- Salir")
+    inicio = int(input("Ingrese la opcion que desee: "))
     nombre_jugador = ""
     apellido_jugador = ""
     monto_inical_pozo = 0
