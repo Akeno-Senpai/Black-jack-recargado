@@ -12,6 +12,8 @@ def menu_opciones(valor_pozo_inicial):
 
     opcion = -1
 
+    monto_pozo_actual = 0
+
     while opcion != 0:
 
         print("Menu de opciones")
@@ -30,7 +32,7 @@ def menu_opciones(valor_pozo_inicial):
 
         elif opcion == 2:
 
-            jugar_una_mano(monto_pozo_actual, monto_inicial_pozo)
+            jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
 
         elif opcion == 3:
 
