@@ -1,14 +1,28 @@
-from Generadores.generar_cartas import generador_1
-from Menu_y_interacciones.Menu.menu_opciones import menu_opciones
+
 
 def jugar_una_mano(monto_pozo_actual):
+
+    from Generadores.generar_cartas import generador_1
+
+    import time
+
     monto_apostado = 0
+
     desicion_jugador = 1
+
     puntaje_actual_jugador = 0
+
     puntaje_actual_croupier = 0
 
-    print("ingrese el valor a apostar")
-    monto_apostado = int(input())
+    print("\n", "ingrese el valor a apostar:")
+
+    print("")
+
+    monto_apostado = int(input("\n\t"))
+
+    print("º" * 100)
+
+    print("º" * 100)
 
     if monto_apostado <= monto_pozo_actual and monto_apostado % 5 == 0 and monto_pozo_actual >= 5:
 
@@ -24,23 +38,156 @@ def jugar_una_mano(monto_pozo_actual):
 
         carta_croupier_1_tupla = (nombre_carta_croupier_1, palo_carta_croupier_1)
 
-        puntaje_actual_jugador = carta_croupier_1 + carta_jugador_2
+        nombre_carta_croupier_2, palo_carta_croupier_2, carta_croupier_2 = generador_1()
+
+        carta_croupier_2_tupla = (nombre_carta_croupier_2, palo_carta_croupier_2)
+
+        puntaje_actual_jugador = carta_jugador_1 + carta_jugador_2
 
         puntaje_actual_croupier = carta_croupier_1
 
-        print(carta_jugador_1_tupla, "Tercera carta jugador")
-        print(carta_jugador_2_tupla, "Segunda carta jugador")
-        print(carta_croupier_1_tupla,"primera carta croupier")
-        print(puntaje_actual_jugador)
-        print(puntaje_actual_croupier)
+        print("\n", carta_jugador_1_tupla, "Primera carta jugador")
+
+        print("\n", carta_jugador_2_tupla, "Segunda carta jugador")
+
+        print("")
+
+        print("º" * 100)
+
+        print("º" * 100)
+
+        print("\n", carta_croupier_1_tupla,"Primera carta croupier")
+
+        print("")
+
+        print("º" * 100)
+
+        print("º" * 100)
+
+        print("\n", puntaje_actual_jugador, "Puntaje total actual jugador")
+
+        print("\n", puntaje_actual_croupier, "Puntaje total actual croupier")
+
+        print("")
+
+        print("º" * 100)
+
+        print("º" * 100)
 
         while puntaje_actual_jugador < 21 and desicion_jugador == 1:
-            desicion_jugador = int(input("Si desea pedir otra carta preciones 1, si desea plantarse precione 2"))
-            if desicion_jugador == 1:
-                 nombre_carta_jugador, palo_carta_jugador, carta_jugador = generador_1()
 
-        puntaje_final_jugador = puntaje_actual_jugador
-        print("Su puntaje final es: ", puntaje_final_jugador)
+            print("\n", "Seleccione alguna de las siguientes opciones: ")
 
-    else:
-        menu_opciones()
+            print("\n", "1- Pedir otra carta")
+
+            print("\n", "2- Plantarse")
+
+            print("")
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            decision_jugador = int(input())
+
+            if decision_jugador == 1:
+
+                nombre_carta_jugador, palo_carta_jugador, carta_jugador = generador_1()
+
+                carta_jugador_tupla = (nombre_carta_jugador, palo_carta_jugador)
+
+                puntaje_actual_jugador += carta_jugador
+
+                print("\n", "Tu nueva carta es:", carta_jugador_tupla)
+
+                print("\n", puntaje_actual_jugador, "Puntaje total actual jugador")
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                while puntaje_actual_croupier < 21 and puntaje_actual_jugador >= 21:
+
+                    nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
+
+                    carta_croupier_tupla = (nombre_carta_croupier, palo_carta_croupier)
+
+                    print("\nLa nueva carta del croupier es: ", carta_croupier_tupla)
+
+                    puntaje_actual_croupier += carta_croupier
+
+                    print("\nPuntaje actual del croupier: ", puntaje_actual_croupier)
+
+                    print("º" * 100)
+
+                    print("º" * 100)
+
+            elif decision_jugador == 2:
+
+                puntaje_final_jugador = puntaje_actual_jugador
+
+                print("\n", "El puntaje final del jugador es: ", puntaje_final_jugador)
+
+                print(carta_croupier_2_tupla, "Segunda carta del croupier")
+
+                puntaje_actual_croupier = carta_croupier_1 + carta_croupier_2
+
+                while puntaje_actual_croupier < 21:
+
+                    nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
+
+                    carta_croupier_tupla = (nombre_carta_croupier, palo_carta_croupier)
+
+                    print("\nLa nueva carta del croupier es: ", carta_croupier_tupla)
+
+                    puntaje_actual_croupier += carta_croupier
+
+                    print("\nPuntaje actual del croupier: ", puntaje_actual_croupier)
+
+                time.sleep(1.5)
+
+                print("")
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                print("º" * 100)
+
+                return
+
+            else:
+
+                print("Lea bien las opciones, no sea pelotudo")
+
+                time.sleep(1.5)
+
+        if puntaje_actual_jugador > 21:
+
+            puntaje_final_jugador = puntaje_actual_jugador
+
+            print("\n", "El puntaje final del jugador es: ", puntaje_final_jugador)
+
+            print("\n", "La mano ah finalizado, a continuacion sera redirijido al menu principal")
+
+            time.sleep(1.5)
+
+            print("")
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
+
+            print("º" * 100)
