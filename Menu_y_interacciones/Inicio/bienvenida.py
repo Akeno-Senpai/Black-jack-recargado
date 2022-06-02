@@ -1,12 +1,10 @@
+
+
 #Solicitar datos del jugador tales como: Nombre, Apellido y monto del pozo#
 
+
 def datos_jugador():
-
-
-
     #Variables#
-
-
     from Menu_y_interacciones.Inicio.Analisis_pozo import pozo_menor_100000
     nombre_jugador = ""
     apellido_jugador = ""
@@ -40,7 +38,7 @@ def datos_jugador():
             apellido_jugador = input("Ingrese su apellido para poder continuar: ")
             monto_inical_pozo_validacion, monto_inical_pozo = pozo_menor_100000()
             while monto_inical_pozo_validacion == False:
-                     monto_inical_pozo_validacion, monto_inical_pozo = pozo_menor_100000()
+                    monto_inical_pozo_validacion, monto_inical_pozo = pozo_menor_100000()
             print(" ")
             print("*" * 40)
             print("\nSea cordialmente bienvendio a Black Jack: Recargado señor: ", nombre_jugador, apellido_jugador)
@@ -58,4 +56,4 @@ def datos_jugador():
 
     return monto_inical_pozo, nombre_jugador, apellido_jugador
 
-datos_jugador()
+
