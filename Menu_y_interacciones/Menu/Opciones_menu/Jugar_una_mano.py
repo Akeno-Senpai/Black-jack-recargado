@@ -1,6 +1,6 @@
 
 
-def jugar_una_mano(monto_pozo_actual):
+def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     from Juego.Cuerpo_del_juego.Analisis_resultados.Resultados_ronda import Resultado
 
@@ -25,6 +25,9 @@ def jugar_una_mano(monto_pozo_actual):
     print("º" * 100)
 
     print("º" * 100)
+
+    if monto_pozo_actual == 0:
+        monto_pozo_actual = monto_pozo_inicial
 
     if monto_apostado <= monto_pozo_actual and monto_apostado % 5 == 0 and monto_pozo_actual >= 5:
 
@@ -120,8 +123,6 @@ def jugar_una_mano(monto_pozo_actual):
 
                     print("\nPuntaje actual del croupier: ", puntaje_actual_croupier)
 
-                    Resultado(puntaje_actual_jugador, puntaje_actual_croupier)
-
                     print("º" * 100)
 
                     print("º" * 100)
@@ -170,6 +171,7 @@ def jugar_una_mano(monto_pozo_actual):
                 print("º" * 100)
 
                 Resultado(puntaje_actual_jugador, puntaje_actual_croupier)
+                return
 
             else:
 
@@ -243,4 +245,5 @@ def jugar_una_mano(monto_pozo_actual):
             print("º" * 100)
 
             Resultado(puntaje_final_jugador, puntaje_final_croupier)
+            return
 
