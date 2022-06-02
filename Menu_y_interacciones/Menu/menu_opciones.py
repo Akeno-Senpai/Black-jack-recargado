@@ -1,5 +1,6 @@
 #Menu de opciones#
 def menu_opciones():
+    from Menu_y_interacciones.Menu.Opciones_menu.Jugar_una_mano import jugar_una_mano
     import time
     opcion = -1
     while opcion != 0:
@@ -12,7 +13,8 @@ def menu_opciones():
         if opcion == 1:
             apostar()
         elif opcion == 2:
-            jugar_mano()
+            monto_pozo_actual = 20000
+            jugar_una_mano(monto_pozo_actual)
         elif opcion == 3:
             salir()
         else:
