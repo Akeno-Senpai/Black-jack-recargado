@@ -26,8 +26,9 @@ def datos_jugador():
     print("\t* El monto del pozo no puede ser mayor a 100000$")
     print("\t* El monto del pozo no puede ser menor a 1$")
 
-
-    inicio = int(input("\nSi aun asi usted desea continuar, presione uno:\t "))
+    print("1- Continuar")
+    print("2- Salir")
+    inicio = int(input("Ingrese la opcion que desee"))
     nombre_jugador = ""
     apellido_jugador = ""
     monto_inical_pozo = 0
@@ -45,14 +46,9 @@ def datos_jugador():
             print("Usted cuenta con un monto de: ", monto_inical_pozo, "$", " dentro de su pozo \n")
             print("*" * 40)
             bandera = False
-        else:
-            salir = int(input(
-                "Si desea salir del programa precione uno, si aun quiere continuar precione dos:\t "))
-            if salir == 1:
+        elif inicio == 2:
                 print("El programa se cerrara \n")
                 bandera = False
-            else:
-                bandera = True
 
     return monto_inical_pozo, nombre_jugador, apellido_jugador
 
