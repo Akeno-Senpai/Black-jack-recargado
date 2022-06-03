@@ -18,12 +18,15 @@ def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier,monto_apostado,monto_
 
     if validacion == 0:
         monto_pozo_actual += monto_apostado * 2
+        print ("Tras la apuesta, tu monto actuaes es igual a:", monto_pozo_actual)
 
     elif validacion == 1
         monto_pozo_actual -= monto_apostado
+        print("Tras la apuesta, tu monto actuaes es igual a:", monto_pozo_actual)
 
     elif validacion == 2
         monto_pozo_actual = monto_pozo_actual
+        print("Tras la apuesta, tu monto actuaes es igual a:", monto_pozo_actual)
 
 
     return validacion, monto_pozo_actual
