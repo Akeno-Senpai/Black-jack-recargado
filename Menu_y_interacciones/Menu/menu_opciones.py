@@ -12,7 +12,9 @@ def menu_opciones(valor_pozo_inicial, racha_crupier):
 
     opcion = -1
 
-    monto_pozo_actual = 0
+    #valor_apostar = 0
+
+    monto_pozo_actual = valor_pozo_inicial
 
     while opcion != 0:
 
@@ -27,15 +29,17 @@ def menu_opciones(valor_pozo_inicial, racha_crupier):
         opcion = int(input("\nIngrese la opcion que quiere realizar: "))
 
         if opcion == 1:
+            print("Tienes en tu pozo :",monto_pozo_actual )
+            monto_pozo_actual, monto_inicial_pozo = apostar(monto_pozo_actual)
 
-            monto_pozo_actual, monto_inicial_pozo = apostar(valor_pozo_inicial)
+
 
         elif opcion == 2:
 
             jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
 
         elif opcion == 3:
-            Victorias_jugador, Partidas_jugadas =0
+            Victorias_jugador, Partidas_jugadas = 0
             salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
 
         else:
