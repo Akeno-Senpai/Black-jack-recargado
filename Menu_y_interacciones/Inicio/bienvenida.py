@@ -5,7 +5,7 @@
 
 def datos_jugador():
     #Variables#
-    from Menu_y_interacciones.Inicio.Analisis_pozo import pozo_menor_100000
+    from Menu_y_interacciones.Menu.Opciones_menu.Analisis_pozo import pozo_menor_100000
     nombre_jugador = ""
     apellido_jugador = ""
     monto_inical_pozo = 0
@@ -51,5 +51,5 @@ def datos_jugador():
                 bandera = False
 
     return monto_inical_pozo, nombre_jugador, apellido_jugador
-
+#datos jugador
 

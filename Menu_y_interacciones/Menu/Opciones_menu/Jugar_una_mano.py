@@ -16,7 +16,9 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     puntaje_actual_croupier = 0
 
-    print("\n", "ingrese el valor a apostar:")
+    print("-"*100)
+    print("\n En tu pozo tienes disponible: ", monto_pozo_actual)
+    print("\n", "Ingrese el valor que quieres apostar:")
 
     print("")
 
