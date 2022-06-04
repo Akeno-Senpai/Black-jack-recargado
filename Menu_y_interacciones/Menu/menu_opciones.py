@@ -14,9 +14,9 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
     opcion = -1
 
-    contador_apuesta = 0
+    total_apuestas = 0
 
-    validacion, racha_croupier, monto_apostado = 0,0,0
+    validacion, racha_croupier, monto_apostado = 0, 0, 0
 
     monto_pozo_actual = valor_pozo_inicial
 
@@ -54,7 +54,7 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
             elif opcion == 3:
 
-                 salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, Partidas_jugadas, validacion)
+                 total_apuestas = salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, monto_apostado, validacion, total_apuestas, valor_pozo_inicial, apuesta_inicial)
 
             else:
 
@@ -67,5 +67,5 @@ def menu_opciones(valor_pozo_inicial, bandera):
                 input()
 
 
-            Victorias_jugador, Partidas_jugadas, validacion, monto_apostado_total, racha_crupier = Contadores(Victorias_jugador, Partidas_jugadas, validacion, monto_apostado)
+            Victorias_jugador, Partidas_jugadas, validacion, racha_crupier, apuesta_inicial = Contadores(Victorias_jugador, Partidas_jugadas, validacion, monto_apostado)
 
