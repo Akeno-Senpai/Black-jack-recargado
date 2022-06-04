@@ -157,7 +157,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 print("")
 
-                while puntaje_actual_croupier < 21 and puntaje_actual_jugador >= 21 and puntaje_actual_croupier < 17:
+                while puntaje_actual_croupier < 21 and puntaje_actual_jugador <= 21 and puntaje_actual_croupier < 17:
 
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 

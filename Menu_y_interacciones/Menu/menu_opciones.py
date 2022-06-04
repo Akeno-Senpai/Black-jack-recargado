@@ -26,6 +26,7 @@ def menu_opciones(valor_pozo_inicial):
 
     partidas_jugadas = 0
 
+
     while opcion != 0:
 
         print("\nMenu de opciones")
@@ -48,10 +49,10 @@ def menu_opciones(valor_pozo_inicial):
 
         elif opcion == 2:
 
-           monto_pozo_actual, validacion, racha_crupier = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
+            monto_pozo_actual, validacion, racha_crupier = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
         elif opcion == 3:
 
-             salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
+            salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
 
         else:
 

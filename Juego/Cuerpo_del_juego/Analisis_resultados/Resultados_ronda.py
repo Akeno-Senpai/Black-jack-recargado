@@ -20,7 +20,7 @@ def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier,monto_apostado,monto_
         print ('\nHa ocurrido un empate', '\n\nTu puntaje es: ',Puntaje_Total_jugador,'\n\ny el del Croupier es: ',Puntaje_Total_Croupier)
 
     if validacion == 0:
-        monto_pozo_actual += monto_apostado * 2
+        monto_pozo_actual += monto_apostado
         print("\nApostaste: ", monto_apostado)
         print ("\nTras la apuesta, tu monto actual es es igual a:", monto_pozo_actual)
         print("")
