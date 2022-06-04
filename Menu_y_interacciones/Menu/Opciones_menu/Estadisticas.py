@@ -1,9 +1,8 @@
-def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, apuesta_max_perdidav2):
+def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, apuesta_max_perdidav2, total_apuestas):
 
     monto_maximo = 0
     apuesta_max_perdida = apuesta_max_perdidav2
-    total_apuestas = 1
-    total_apuestas += apuesta_actual - 1
+    total_apuestas += apuesta_actual
     print(cantidad_apuestas, "cantidad de apuestas")
     print(apuesta_actual, "La apuesta actual")
 
@@ -25,6 +24,7 @@ def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, ap
 
     print(monto_maximo, "Monto_maximo")
     print(promedio_apuestas, "Promedio apuestas")
+    print(total_apuestas, "Total apuestas")
     print(apuesta_max_perdida, "Apuestas perdidas")
 
 

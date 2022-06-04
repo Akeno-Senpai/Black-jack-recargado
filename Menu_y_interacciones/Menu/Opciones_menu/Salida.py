@@ -1,4 +1,4 @@
-def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apuesta_actual, cantidad_apuestas, validacion):
+def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apuesta_actual, validacion):
 
     from Menu_y_interacciones.Menu.Opciones_menu.Estadisticas import estadisticas
 

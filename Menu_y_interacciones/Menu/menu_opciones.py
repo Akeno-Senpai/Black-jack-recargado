@@ -54,7 +54,7 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
             elif opcion == 3:
 
-                 salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, monto_apostado, Partidas_jugadas, validacion)
+                 salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, Partidas_jugadas, validacion)
 
             else:
 
