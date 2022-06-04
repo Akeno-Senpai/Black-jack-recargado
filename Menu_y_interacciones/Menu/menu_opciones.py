@@ -1,6 +1,6 @@
 
 
-def menu_opciones(valor_pozo_inicial, racha_crupier):
+def menu_opciones(valor_pozo_inicial):
 
     from Menu_y_interacciones.Menu.Opciones_menu.Apostar import apostar
 
@@ -8,17 +8,26 @@ def menu_opciones(valor_pozo_inicial, racha_crupier):
 
     from Menu_y_interacciones.Menu.Opciones_menu.Salida import salir
 
+    from Menu_y_interacciones.Menu.Opciones_menu.Contadores import Contadores
+
     import time
 
     opcion = -1
+
+    validacion = 0
 
     #valor_apostar = 0
 
     monto_pozo_actual = valor_pozo_inicial
 
+    partidas_jugadas = 0
+
+    racha_crupier, Victorias_jugador, Partidas_jugadas = 0, 0, 0
+
+
     while opcion != 0:
 
-        print("Menu de opciones")
+        print("\nMenu de opciones")
 
         print("\n1- Apostar")
 
@@ -28,19 +37,21 @@ def menu_opciones(valor_pozo_inicial, racha_crupier):
 
         opcion = int(input("\nIngrese la opcion que quiere realizar: "))
 
+
+
         if opcion == 1:
+
             print("Tienes en tu pozo :",monto_pozo_actual )
+
             monto_pozo_actual, monto_inicial_pozo = apostar(monto_pozo_actual)
-
-
 
         elif opcion == 2:
 
-            jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
+            racha_crupier, Victorias_jugador, Partidas_jugadas, monto_pozo_actual, validacion = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial, racha_crupier, Victorias_jugador, Partidas_jugadas, validacion)
 
         elif opcion == 3:
-            Victorias_jugador, Partidas_jugadas = 0
-            salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
+
+             salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
 
         else:
 
@@ -51,4 +62,6 @@ def menu_opciones(valor_pozo_inicial, racha_crupier):
             print("Precione enter para volver al menu: ")
 
             input()
-    return racha_crupier
+
+
+        racha_crupier, Victorias_jugador, Partidas_jugadas, validacion = Contadores(racha_crupier, Victorias_jugador, Partidas_jugadas, validacion)
