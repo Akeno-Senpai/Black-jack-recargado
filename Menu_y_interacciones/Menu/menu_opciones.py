@@ -20,6 +20,8 @@ def menu_opciones(valor_pozo_inicial):
 
     monto_pozo_actual = valor_pozo_inicial
 
+    acha_crupier, Victorias_jugador, Partidas_jugadas = 0, 0, 0
+
     partidas_jugadas = 0
 
     while opcion != 0:

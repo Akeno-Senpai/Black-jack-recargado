@@ -4,7 +4,7 @@ def generador_1 ():
     valores = (11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)
     palos = ("Diamante", "Corazon", "Pica", "Trebol")
 
-    ind_carta = random.randint(0, 13)
+    ind_carta = random.randint(0, 12)
     ind_palos = random.randint(0, 3)
     nom_carta = nombres[ind_carta]
     val_carta = valores[ind_carta]
