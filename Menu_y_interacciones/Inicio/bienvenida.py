@@ -47,9 +47,11 @@ def datos_jugador():
             print("*" * 40)
             bandera = False
         elif inicio == 2:
+
             print("\nEl programa se cerrara \n")
+
             bandera = False
 
-    return monto_inical_pozo, nombre_jugador, apellido_jugador
+    return monto_inical_pozo, nombre_jugador, apellido_jugador, bandera
 #datos jugador
 

@@ -10,15 +10,13 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     import time
 
-    racha_croupier = 0
-
     victorias_jugador = 0
 
     partidas_jugadas = 0
 
-    monto_apostado = 0
-
     contador_apuesta = 0
+
+    validacion, racha_croupier, monto_apostado = 0,0,0
 
     desicion_jugador = 1
 
@@ -159,7 +157,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 print("")
 
-                while puntaje_actual_croupier < 21 and puntaje_actual_jugador <= 21 and puntaje_actual_croupier < 17:
+                while puntaje_actual_jugador >= 21 and puntaje_actual_croupier < 17:
 
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 
@@ -250,7 +248,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 racha_croupier += 1
 
-                return monto_pozo_actual, validacion, racha_croupier
+                return monto_pozo_actual, validacion, racha_croupier, monto_apostado
 
             else:
 
@@ -329,5 +327,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
             time.sleep(1)
 
             racha_croupier += 1
+
+            monto_apostado_actual = monto_apostado
 
             return monto_pozo_actual, validacion, racha_croupier, monto_apostado

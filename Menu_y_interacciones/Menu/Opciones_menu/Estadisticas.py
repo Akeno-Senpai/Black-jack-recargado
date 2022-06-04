@@ -2,8 +2,10 @@ def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, ap
 
     monto_maximo = 0
     apuesta_max_perdida = apuesta_max_perdidav2
-    total_apuestas = 0
-    total_apuestas += apuesta_actual
+    total_apuestas = 1
+    total_apuestas += apuesta_actual - 1
+    print(cantidad_apuestas, "cantidad de apuestas")
+    print(apuesta_actual, "La apuesta actual")
 
     #El monto máximo que llegó a tener el jugador en el pozo.
 

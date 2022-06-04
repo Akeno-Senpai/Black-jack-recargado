@@ -1,8 +1,9 @@
-def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apuesta_actual, cantidad_apuestas, validacion,):
+def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apuesta_actual, cantidad_apuestas, validacion):
 
     from Menu_y_interacciones.Menu.Opciones_menu.Estadisticas import estadisticas
 
     racha_crupier_max = 0
+    apuesta_max_perdidav2 = 0
 
     if racha_crupier > racha_crupier_max:
 
