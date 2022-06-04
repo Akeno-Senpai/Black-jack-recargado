@@ -1,6 +1,6 @@
 
 
-def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victorias_jugador, partidas_jugadas, validacion):
+def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     from Juego.Cuerpo_del_juego.Analisis_resultados.Resultados_ronda import Resultado
 
@@ -144,7 +144,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
                 print("")
 
-                while puntaje_actual_croupier < 21 and puntaje_actual_jugador >= 21 and puntaje_actual_croupier <= 17:
+                while puntaje_actual_croupier < 21 and puntaje_actual_jugador >= 21 and puntaje_actual_croupier < 17:
 
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 
@@ -188,7 +188,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
                 puntaje_actual_croupier = carta_croupier_1 + carta_croupier_2
 
-                while puntaje_actual_croupier <= 17:
+                while puntaje_actual_croupier < 17:
 
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 
@@ -227,7 +227,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
                 time.sleep(1)
 
-                return racha_croupier, victorias_jugador, partidas_jugadas, monto_pozo_actual, validacion
+                return monto_pozo_actual, validacion
 
             else:
 
@@ -261,10 +261,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
             validacion, monto_pozo_actual = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual)
 
-            racha_croupier += 1
-
-            victorias_jugador += 1
-
             print("º" * 100)
 
             print("º" * 100)
@@ -273,7 +269,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
             time.sleep(1)
 
-            return racha_croupier, victorias_jugador, partidas_jugadas, monto_pozo_actual, validacion
+            return monto_pozo_actual, validacion
 
         if puntaje_actual_jugador == 21:
 
@@ -284,7 +280,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
             time.sleep(1)
 
             print("\n", "La mano ah finalizado, a continuacion sera redirigido al menu principal")
-
 
             time.sleep(1)
 
@@ -300,10 +295,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
             validacion, monto_pozo_actual = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual)
 
-            racha_croupier += 1
-
-            victorias_jugador += 1
-
             print("º" * 100)
 
             print("º" * 100)
@@ -312,8 +303,4 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victor
 
             time.sleep(1)
 
-            return racha_croupier, victorias_jugador, partidas_jugadas, monto_pozo_actual, validacion
-
-    time.sleep(1)
-
-    return racha_croupier, victorias_jugador, partidas_jugadas, monto_pozo_actual
+            return monto_pozo_actual, validacion

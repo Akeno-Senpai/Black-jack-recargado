@@ -47,8 +47,7 @@ def menu_opciones(valor_pozo_inicial):
 
         elif opcion == 2:
 
-            racha_crupier, Victorias_jugador, Partidas_jugadas, monto_pozo_actual, validacion = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial, racha_crupier, Victorias_jugador, Partidas_jugadas, validacion)
-
+           monto_pozo_actual, validacion = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
         elif opcion == 3:
 
              salir(Victorias_jugador, Partidas_jugadas, racha_crupier)
