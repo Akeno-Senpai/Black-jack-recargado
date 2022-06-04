@@ -16,6 +16,8 @@ def menu_opciones(valor_pozo_inicial):
 
     validacion = 0
 
+    racha_crupier = 0
+
     #valor_apostar = 0
 
     monto_pozo_actual = valor_pozo_inicial
