@@ -15,7 +15,7 @@ def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apu
 
     Porcentaje_victorias = (Victorias_jugador * 100) // Partidas_jugadas
 
-    monto_maximo, promedio_apuestas, apuesta_max_perdidav2 = estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, apuesta_max_perdidav2)
+    monto_maximo, promedio_apuestas, apuesta_max_perdidav2 = estadisticas(monto_actual, apuesta_actual, Partidas_jugadas, validacion, apuesta_max_perdidav2)
 
 
     print("Ganaste:", Victorias_jugador, " partidas")

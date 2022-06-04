@@ -14,19 +14,19 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
     opcion = -1
 
-    validacion = 0
+    contador_apuesta = 0
 
-    monto_apostado = 0
+    validacion, racha_croupier, monto_apostado = 0,0,0
 
     monto_pozo_actual = valor_pozo_inicial
-
-    acha_crupier, Victorias_jugador, Partidas_jugadas = 0, 0, 0
 
     partidas_jugadas = 0
 
     if bandera == True or valor_pozo_inicial != 0:
 
         while opcion != 0:
+
+            validacion = -1
 
             print("\nMenu de opciones")
 
@@ -48,7 +48,7 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
             elif opcion == 2:
 
-               monto_pozo_actual, validacion, racha_crupier, monto_apostado = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
+               monto_pozo_actual, validacion, monto_apostado = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
 
             elif opcion == 3:
 
@@ -65,5 +65,5 @@ def menu_opciones(valor_pozo_inicial, bandera):
                 input()
 
 
-            racha_crupier, Victorias_jugador, Partidas_jugadas, validacion, monto_apostado_total, contador_apuestas = Contadores(racha_crupier, Victorias_jugador, Partidas_jugadas, validacion, monto_apostado)
+            Victorias_jugador, Partidas_jugadas, validacion, monto_apostado_total, racha_crupier = Contadores(Victorias_jugador, Partidas_jugadas, validacion, monto_apostado)
 

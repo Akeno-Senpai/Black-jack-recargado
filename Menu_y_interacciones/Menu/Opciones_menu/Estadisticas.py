@@ -23,6 +23,9 @@ def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, ap
 
         apuesta_max_perdida = apuesta_actual
 
+    print(monto_maximo, "Monto_maximo")
+    print(promedio_apuestas, "Promedio apuestas")
+    print(apuesta_max_perdida, "Apuestas perdidas")
 
 
     return monto_maximo, promedio_apuestas, apuesta_max_perdida
