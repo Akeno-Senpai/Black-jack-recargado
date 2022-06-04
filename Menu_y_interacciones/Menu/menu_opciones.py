@@ -20,7 +20,9 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
     monto_pozo_actual = valor_pozo_inicial
 
-    partidas_jugadas = 0
+    Partidas_jugadas = 0
+
+    Victorias_jugador = 0
 
     if bandera == True or valor_pozo_inicial != 0:
 
@@ -48,11 +50,11 @@ def menu_opciones(valor_pozo_inicial, bandera):
 
             elif opcion == 2:
 
-               monto_pozo_actual, validacion, monto_apostado = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
+               monto_pozo_actual, validacion, monto_apostado, contador_bj_natural = jugar_una_mano(monto_pozo_actual, valor_pozo_inicial)
 
             elif opcion == 3:
 
-                 salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, monto_apostado, partidas_jugadas, validacion)
+                 salir(Victorias_jugador, Partidas_jugadas, racha_crupier, monto_pozo_actual, monto_apostado, Partidas_jugadas, validacion)
 
             else:
 
