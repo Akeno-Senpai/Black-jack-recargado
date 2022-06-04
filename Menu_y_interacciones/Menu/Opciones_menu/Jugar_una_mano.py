@@ -6,6 +6,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     from Generadores.generar_cartas import generador_1
 
+    from Generadores.analisis_AS import analisis_AS
+
     import time
 
     racha_croupier = 0
@@ -60,7 +62,15 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
         carta_croupier_2_tupla = (nombre_carta_croupier_2, palo_carta_croupier_2)
 
+        carta_jugador_1 = analisis_AS(puntaje_actual_jugador, carta_jugador_1)
+
+        puntaje_actual_jugador = carta_jugador_1
+
+        carta_jugador_2 = analisis_AS(puntaje_actual_jugador, carta_jugador_2)
+
         puntaje_actual_jugador = carta_jugador_1 + carta_jugador_2
+
+        carta_croupier_1 = analisis_AS(puntaje_actual_croupier, carta_croupier_1)
 
         puntaje_actual_croupier = carta_croupier_1
 
@@ -126,9 +136,12 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 carta_jugador_tupla = (nombre_carta_jugador, palo_carta_jugador)
 
+                carta_jugador = analisis_AS(puntaje_actual_jugador, carta_jugador)
+
                 puntaje_actual_jugador += carta_jugador
 
                 time.sleep(1)
+
 
                 print("\n", "Tu nueva carta es:", carta_jugador_tupla)
 
@@ -153,6 +166,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
                     time.sleep(1)
 
                     print("\nLa nueva carta del croupier es: ", carta_croupier_tupla)
+
+                    carta_croupier = analisis_AS(puntaje_actual_croupier, carta_croupier)
 
                     puntaje_actual_croupier += carta_croupier
 
@@ -186,6 +201,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 print("º" * 100)
 
+                carta_croupier_2 = analisis_AS(puntaje_actual_croupier, carta_croupier_2)
+
                 puntaje_actual_croupier = carta_croupier_1 + carta_croupier_2
 
                 while puntaje_actual_croupier < 17:
@@ -197,6 +214,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
                     time.sleep(1)
 
                     print("\nLa nueva carta del croupier es: ", carta_croupier_tupla)
+
+                    carta_croupier = analisis_AS(puntaje_actual_croupier, carta_croupier)
 
                     puntaje_actual_croupier += carta_croupier
 
@@ -227,7 +246,9 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 time.sleep(1)
 
-                return monto_pozo_actual, validacion
+                racha_croupier += 1
+
+                return monto_pozo_actual, validacion, racha_croupier
 
             else:
 
@@ -269,7 +290,9 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             time.sleep(1)
 
-            return monto_pozo_actual, validacion
+            racha_croupier += 1
+
+            return monto_pozo_actual, validacion, racha_croupier
 
         if puntaje_actual_jugador == 21:
 
@@ -303,4 +326,6 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             time.sleep(1)
 
-            return monto_pozo_actual, validacion
+            racha_croupier += 1
+
+            return monto_pozo_actual, validacion, racha_croupier
