@@ -1,6 +1,6 @@
 
 
-def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victorias_jugador, partidas_jugadas):
+def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial, racha_croupier, victorias_jugador, partidas_jugadas, validacion):
 
     from Juego.Cuerpo_del_juego.Analisis_resultados.Resultados_ronda import Resultado
 
