@@ -10,13 +10,13 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     import time
 
+    racha_croupier = 0
+
     victorias_jugador = 0
 
     partidas_jugadas = 0
 
-    contador_apuesta = 0
-
-    validacion, racha_croupier, monto_apostado = 0,0,0
+    monto_apostado = 0
 
     desicion_jugador = 1
 
@@ -73,6 +73,10 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
         carta_croupier_1 = analisis_AS(puntaje_actual_croupier, carta_croupier_1)
 
         puntaje_actual_croupier = carta_croupier_1
+
+        analisis_BJN_jugador = carta_jugador_1 + carta_jugador_2
+
+        analisis_BJN_crupier = carta_croupier_1 + carta_croupier_2
 
         time.sleep(1)
 
@@ -157,7 +161,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 print("")
 
-                while puntaje_actual_jugador >= 21 and puntaje_actual_croupier < 17:
+                while puntaje_actual_croupier < 21 and puntaje_actual_jugador <= 21 and puntaje_actual_croupier < 17:
 
                     nombre_carta_croupier, palo_carta_croupier, carta_croupier = generador_1()
 
@@ -248,7 +252,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 racha_croupier += 1
 
-                return monto_pozo_actual, validacion, racha_croupier, monto_apostado
+                return monto_pozo_actual, validacion, racha_croupier
 
             else:
 
@@ -292,7 +296,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             racha_croupier += 1
 
-            return monto_pozo_actual, validacion, racha_croupier, monto_apostado
+            return monto_pozo_actual, validacion, racha_croupier
 
         if puntaje_actual_jugador == 21:
 
@@ -328,6 +332,4 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             racha_croupier += 1
 
-            monto_apostado_actual = monto_apostado
-
-            return monto_pozo_actual, validacion, racha_croupier, monto_apostado
+            return monto_pozo_actual, validacion, racha_croupier, analisis_BJN_jugador, analisis_BJN_crupier
