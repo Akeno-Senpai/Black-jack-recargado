@@ -18,6 +18,8 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
     monto_apostado = 0
 
+    contador_apuesta = 0
+
     desicion_jugador = 1
 
     puntaje_actual_jugador = 0
@@ -292,7 +294,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             racha_croupier += 1
 
-            return monto_pozo_actual, validacion, racha_croupier
+            return monto_pozo_actual, validacion, racha_croupier, monto_apostado
 
         if puntaje_actual_jugador == 21:
 
@@ -328,4 +330,4 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             racha_croupier += 1
 
-            return monto_pozo_actual, validacion, racha_croupier
+            return monto_pozo_actual, validacion, racha_croupier, monto_apostado
