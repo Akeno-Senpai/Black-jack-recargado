@@ -3,7 +3,7 @@
 def estadisticas(monto_actual, apuesta_actual, cantidad_apuestas, validacion, total_apuestas, monto_pozo_inicial, apuesta_inicial):
     monto_maximo = monto_pozo_inicial
     apuesta_max_perdida = apuesta_inicial
-    total_apuestas += apuesta_actual
+    total_apuestas += apuesta_actual + apuesta_inicial
     print(cantidad_apuestas, "cantidad de apuestas")
     print(apuesta_actual, "La apuesta actual")
 
