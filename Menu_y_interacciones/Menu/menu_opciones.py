@@ -57,7 +57,7 @@ if bandera == True or valor_pozo_inicial != 0:
 
         elif opcion == 3:
 
-            salir(Victorias_jugador, Partidas_jugadas, racha_croupier, monto_pozo_actual, monto_apostado, validacion, total_apuestas, valor_pozo_inicial, apuesta_inicial)
+            salir(Victorias_jugador, Partidas_jugadas, racha_croupier, monto_pozo_actual, monto_apostado, validacion, total_apuestas, valor_pozo_inicial, apuesta_inicial, contador_bj_natural)
 
         else:
 
