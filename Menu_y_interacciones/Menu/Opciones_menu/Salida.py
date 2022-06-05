@@ -29,7 +29,7 @@ def salir (Victorias_jugador, Partidas_jugadas, racha_crupier, monto_actual, apu
 
     print("\n", "El monto maximo registrado en tu pozo es: ", monto_maximo)
 
-    print("\n", "Tu promedio de apuestas es: ", promedio_apuestas)
+    print("\n", "Tu promedio de apuestas es: ", round(promedio_apuestas))
 
     print("\n", "La mayor perdida que sufriste es de: ", apuesta_max_perdida)
 
