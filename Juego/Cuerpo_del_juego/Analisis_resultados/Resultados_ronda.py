@@ -1,7 +1,7 @@
 
 
 def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier,monto_apostado,monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_croupier):
-
+    racha_croupier = 0
     contador_BJN = 0
 
     if (Puntaje_Total_jugador <= 21) and (Puntaje_Total_Croupier < Puntaje_Total_jugador) or (Puntaje_Total_jugador <= 21 and Puntaje_Total_Croupier > 21):
@@ -14,6 +14,8 @@ def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier,monto_apostado,monto_
         print ('\nHas ganado esta ronda', '\n\nTu puntaje es: ', Puntaje_Total_jugador,'\n\ny el del Croupier es: ',Puntaje_Total_Croupier)
 
     elif (Puntaje_Total_Croupier > Puntaje_Total_jugador) and (Puntaje_Total_Croupier <= 21) or (Puntaje_Total_jugador > 21):
+
+        racha_croupier += 1
 
         if analisis_BJN_croupier == 21:
             contador_BJN += 1
@@ -55,7 +57,7 @@ def Resultado(Puntaje_Total_jugador,Puntaje_Total_Croupier,monto_apostado,monto_
         print("")
 
 
-    return validacion, monto_pozo_actual, contador_BJN
+    return validacion, monto_pozo_actual, contador_BJN, racha_croupier
 
 
 

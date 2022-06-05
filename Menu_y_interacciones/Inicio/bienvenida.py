@@ -52,6 +52,6 @@ def datos_jugador():
 
             bandera = False
 
-    return monto_inical_pozo, nombre_jugador, apellido_jugador, bandera
+    return monto_inical_pozo, bandera
 #datos jugador
 

@@ -240,7 +240,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 print("º" * 100)
 
-                validacion, monto_pozo_actual, contador_bj_natural = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
+                validacion, monto_pozo_actual, contador_bj_natural, racha_croupier = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
 
                 print("º" * 100)
 
@@ -250,7 +250,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
                 time.sleep(1)
 
-                return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural
+                return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural, racha_croupier
 
             else:
 
@@ -282,7 +282,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             print("º" * 100)
 
-            validacion, monto_pozo_actual, contador_bj_natural = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
+            validacion, monto_pozo_actual, contador_bj_natural, racha_croupier = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
 
             print("º" * 100)
 
@@ -292,7 +292,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             time.sleep(1)
 
-            return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural
+            return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural, racha_croupier
 
         if puntaje_actual_jugador == 21:
 
@@ -316,7 +316,7 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             print("º" * 100)
 
-            validacion, monto_pozo_actual, contador_bj_natural = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
+            validacion, monto_pozo_actual, contador_bj_natural, racha_croupier = Resultado(puntaje_actual_jugador, puntaje_actual_croupier, monto_apostado, monto_pozo_actual, analisis_BJN_jugador, analisis_BJN_crupier)
 
             print("º" * 100)
 
@@ -326,4 +326,4 @@ def jugar_una_mano(monto_pozo_actual, monto_pozo_inicial):
 
             time.sleep(1)
 
-            return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural
+            return monto_pozo_actual, validacion, monto_apostado, contador_bj_natural, racha_croupier
